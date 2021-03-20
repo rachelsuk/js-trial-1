@@ -97,7 +97,9 @@ function censorVowels(word) {
     if ('aeiou'.includes(letter)) {
       chars.push('*');
     }
-    chars.push(letter);
+    else {
+      chars.push(letter);
+    }
   }
 
   return chars.join('');
@@ -188,7 +190,7 @@ function hasBalancedParens(string) {
     }
   }
 
-  return parens < 0;
+  return parens == 0;
 }
 
 
